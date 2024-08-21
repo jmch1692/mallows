@@ -1,0 +1,773 @@
+[gd_scene load_steps=34 format=3 uid="uid://dclcclfnjiua8"]
+
+[ext_resource type="Texture2D" uid="uid://fdpin6w08prc" path="res://art/mallows/Wheel.png" id="1_fpt5r"]
+[ext_resource type="Texture2D" uid="uid://dut1cbn7dqekq" path="res://icon.svg" id="1_hi50l"]
+[ext_resource type="Script" path="res://scenes/characters/haki/haki.gd" id="1_mbgbr"]
+[ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_cdr2n"]
+[ext_resource type="Texture2D" uid="uid://bdnw7ttsryed3" path="res://art/mallows/haki.png" id="2_f75tk"]
+[ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="4_o1fsy"]
+[ext_resource type="Script" path="res://scenes/characters/haki/states/inactive.gd" id="5_2eqww"]
+[ext_resource type="Script" path="res://scenes/characters/haki/states/hack.gd" id="5_2ojq6"]
+[ext_resource type="Script" path="res://scenes/characters/haki/states/idle.gd" id="6_wpwpu"]
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_uk5j4"]
+resource_local_to_scene = true
+bone_index = 0
+bone2d_node = NodePath("Bone-0")
+target_nodepath = NodePath("Bone-3")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_hrmux"]
+resource_local_to_scene = true
+bone_index = 1
+bone2d_node = NodePath("Bone-1")
+target_nodepath = NodePath("Bone-4")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_td08c"]
+resource_local_to_scene = true
+bone_index = 2
+bone2d_node = NodePath("Bone-2")
+target_nodepath = NodePath("Bone-4")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_w73dw"]
+resource_local_to_scene = true
+bone_index = 3
+bone2d_node = NodePath("Bone-3")
+target_nodepath = NodePath("Bone-4")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_1yib8"]
+resource_local_to_scene = true
+bone_index = 4
+bone2d_node = NodePath("Bone-4")
+target_nodepath = NodePath("Bone-5")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_rwj30"]
+resource_local_to_scene = true
+bone_index = 5
+bone2d_node = NodePath("Bone-5")
+target_nodepath = NodePath("Bone-4")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_bukga"]
+resource_local_to_scene = true
+bone_index = 6
+bone2d_node = NodePath("Bone-6")
+target_nodepath = NodePath("Bone-4")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_4g8gg"]
+resource_local_to_scene = true
+bone_index = 7
+bone2d_node = NodePath("Bone-7")
+target_nodepath = NodePath("Bone-6")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_u5j7r"]
+resource_local_to_scene = true
+bone_index = 8
+bone2d_node = NodePath("Bone-8")
+target_nodepath = NodePath("Bone-5")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_te1bo"]
+resource_local_to_scene = true
+enabled = true
+modification_count = 9
+modifications/0 = SubResource("SkeletonModification2DLookAt_uk5j4")
+modifications/1 = SubResource("SkeletonModification2DLookAt_hrmux")
+modifications/2 = SubResource("SkeletonModification2DLookAt_td08c")
+modifications/3 = SubResource("SkeletonModification2DLookAt_w73dw")
+modifications/4 = SubResource("SkeletonModification2DLookAt_1yib8")
+modifications/5 = SubResource("SkeletonModification2DLookAt_rwj30")
+modifications/6 = SubResource("SkeletonModification2DLookAt_bukga")
+modifications/7 = SubResource("SkeletonModification2DLookAt_4g8gg")
+modifications/8 = SubResource("SkeletonModification2DLookAt_u5j7r")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjhpk"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3bjh"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op03t"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6p8p"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfum7"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8v4b2"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyk48"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy18w"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5oqm"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f0gxk"]
+friction = 2.0
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sx2er"]
+radius = 36.0139
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bdbq2"]
+friction = 2.0
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_csxwr"]
+radius = 18.0278
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ale3x"]
+size = Vector2(141.785, 25.948)
+
+[node name="Haki" type="Node2D" node_paths=PackedStringArray("front_wheel", "rear_wheel")]
+position = Vector2(1, 1)
+script = ExtResource("1_mbgbr")
+front_wheel = NodePath("Chair/FrontWheel")
+rear_wheel = NodePath("Chair/RearWheel")
+
+[node name="SoftBody2D" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(92, -121)
+texture = ExtResource("2_f75tk")
+skeleton = NodePath("Skeleton2D")
+polygon = PackedVector2Array(49, 14, 34, 14, 25, 16, 19, 16, 7, 21, 7, 132, 10, 133, 10, 134, 16, 134, 16, 135, 43, 136, 43, 137, 99, 137, 116, 135, 126, 135, 126, 134, 132, 134, 134, 132, 135, 132, 135, 21, 131, 19, 131, 18, 123, 17, 123, 16, 108, 15, 108, 14, 49, 13, 37, 43, 7, 43, 7, 21, 19, 16, 25, 16, 34, 14, 37, 14, 37, 103, 7, 103, 7, 73, 37, 73, 37, 73, 7, 73, 7, 43, 37, 43, 37, 135.778, 16, 135, 16, 134, 10, 134, 10, 133, 37, 133, 37, 133, 10, 133, 7, 132, 7, 103, 37, 103, 97, 13.8136, 97, 43, 67, 43, 67, 13.3051, 67, 13.3051, 67, 43, 37, 43, 37, 14, 49, 14, 49, 13, 67, 73, 37, 73, 37, 43, 67, 43, 97, 103, 67, 103, 67, 73, 97, 73, 67, 103, 37, 103, 37, 73, 67, 73, 97, 73, 67, 73, 67, 43, 97, 43, 67, 133, 37, 133, 37, 103, 67, 103, 97, 137, 67, 137, 67, 133, 97, 133, 67, 137, 43, 137, 43, 136, 37, 135.778, 37, 133, 67, 133, 97, 133, 67, 133, 67, 103, 97, 103, 131, 18, 131, 19, 135, 21, 135, 43, 127, 43, 127, 17.5, 108, 14, 108, 15, 123, 16, 123, 17, 127, 17.5, 127, 43, 97, 43, 97, 13.8136, 127, 73, 97, 73, 97, 43, 127, 43, 135, 103, 127, 103, 127, 73, 135, 73, 127, 103, 97, 103, 97, 73, 127, 73, 135, 73, 127, 73, 127, 43, 135, 43, 127, 133, 97, 133, 97, 103, 127, 103, 132, 134, 127, 134, 127, 133, 133, 133, 127, 134, 126, 134, 126, 135, 116, 135, 99, 137, 97, 137, 97, 133, 127, 133, 135, 132, 134, 132, 133, 133, 127, 133, 127, 103, 135, 103)
+polygons = [PackedInt32Array(33, 27, 28), PackedInt32Array(28, 29, 30), PackedInt32Array(31, 32, 33), PackedInt32Array(28, 30, 31), PackedInt32Array(31, 33, 28), PackedInt32Array(37, 34, 35), PackedInt32Array(35, 36, 37), PackedInt32Array(41, 38, 39), PackedInt32Array(39, 40, 41), PackedInt32Array(47, 42, 43), PackedInt32Array(44, 45, 46), PackedInt32Array(47, 43, 44), PackedInt32Array(44, 46, 47), PackedInt32Array(52, 48, 49), PackedInt32Array(49, 50, 51), PackedInt32Array(51, 52, 49), PackedInt32Array(56, 53, 54), PackedInt32Array(54, 55, 56), PackedInt32Array(62, 57, 58), PackedInt32Array(58, 59, 60), PackedInt32Array(61, 62, 58), PackedInt32Array(58, 60, 61), PackedInt32Array(66, 63, 64), PackedInt32Array(64, 65, 66), PackedInt32Array(70, 67, 68), PackedInt32Array(68, 69, 70), PackedInt32Array(74, 71, 72), PackedInt32Array(72, 73, 74), PackedInt32Array(78, 75, 76), PackedInt32Array(76, 77, 78), PackedInt32Array(82, 79, 80), PackedInt32Array(80, 81, 82), PackedInt32Array(86, 83, 84), PackedInt32Array(84, 85, 86), PackedInt32Array(92, 87, 88), PackedInt32Array(89, 90, 91), PackedInt32Array(92, 88, 89), PackedInt32Array(89, 91, 92), PackedInt32Array(96, 93, 94), PackedInt32Array(94, 95, 96), PackedInt32Array(102, 97, 98), PackedInt32Array(98, 99, 100), PackedInt32Array(100, 101, 102), PackedInt32Array(102, 98, 100), PackedInt32Array(110, 103, 104), PackedInt32Array(104, 105, 106), PackedInt32Array(106, 107, 108), PackedInt32Array(108, 109, 110), PackedInt32Array(110, 104, 106), PackedInt32Array(106, 108, 110), PackedInt32Array(114, 111, 112), PackedInt32Array(112, 113, 114), PackedInt32Array(118, 115, 116), PackedInt32Array(116, 117, 118), PackedInt32Array(122, 119, 120), PackedInt32Array(120, 121, 122), PackedInt32Array(126, 123, 124), PackedInt32Array(124, 125, 126), PackedInt32Array(130, 127, 128), PackedInt32Array(128, 129, 130), PackedInt32Array(134, 131, 132), PackedInt32Array(132, 133, 134), PackedInt32Array(142, 135, 136), PackedInt32Array(136, 137, 138), PackedInt32Array(138, 139, 140), PackedInt32Array(140, 141, 142), PackedInt32Array(142, 136, 138), PackedInt32Array(138, 140, 142), PackedInt32Array(148, 143, 144), PackedInt32Array(144, 145, 146), PackedInt32Array(146, 147, 148), PackedInt32Array(148, 144, 146)]
+bones = ["Bone-0", PackedFloat32Array(0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone-1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone-2", PackedFloat32Array(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone-3", PackedFloat32Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone-4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone-5", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0), "Bone-6", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Bone-7", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1), "Bone-8", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
+internal_vertex_count = 122
+script = ExtResource("2_cdr2n")
+show_shapes = true
+vertex_interval = 60
+softness = 20.0
+radius = 50
+margin_offset_edge = 10.0
+mass = 0.2
+
+[node name="Skeleton2D" type="Skeleton2D" parent="SoftBody2D"]
+visible = false
+modification_stack = SubResource("SkeletonModificationStack2D_te1bo")
+
+[node name="Bone-0" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(29.2537, 35.3836)
+rotation = 0.0667596
+scale = Vector2(1, 1)
+rest = Transform2D(0.997772, 0.0667101, -0.0667101, 0.997772, 29.2537, 35.3836)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [27, 28, 29, 30, 31, 32, 33]
+metadata/idx = 0
+metadata/connected_nodes_paths = [NodePath("Bone-1"), NodePath("Bone-3"), NodePath("Bone-4")]
+metadata/connected_nodes_idx = [1, 3, 4]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-1" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(31.9917, 73.4078)
+rotation = 0.0407937
+rest = Transform2D(0.999168, 0.0407824, -0.0407824, 0.999168, 31.9917, 73.4078)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [34, 35, 36, 37, 38, 39, 40, 41]
+metadata/idx = 1
+metadata/connected_nodes_paths = [NodePath("Bone-0"), NodePath("Bone-3"), NodePath("Bone-4"), NodePath("Bone-2"), NodePath("Bone-5")]
+metadata/connected_nodes_idx = [0, 3, 4, 2, 5]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-2" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(29.4112, 112.675)
+rotation = -0.736063
+rest = Transform2D(0.741118, -0.671375, 0.671375, 0.741118, 29.4112, 112.675)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
+metadata/idx = 2
+metadata/connected_nodes_paths = [NodePath("Bone-1"), NodePath("Bone-4"), NodePath("Bone-5")]
+metadata/connected_nodes_idx = [1, 4, 5]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-3" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(67.848, 37.964)
+rotation = 1.48589
+rest = Transform2D(0.0848, 0.996398, -0.996398, 0.0848, 67.848, 37.964)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [53, 54, 55, 56, 57, 58, 59, 60, 61, 62]
+metadata/idx = 3
+metadata/connected_nodes_paths = [NodePath("Bone-0"), NodePath("Bone-1"), NodePath("Bone-4"), NodePath("Bone-6"), NodePath("Bone-7")]
+metadata/connected_nodes_idx = [0, 1, 4, 6, 7]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-4" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(71, 75)
+rotation = 1.65945
+rest = Transform2D(-0.0885395, 0.996073, -0.996073, -0.0885395, 71, 75)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
+metadata/idx = 4
+metadata/connected_nodes_paths = [NodePath("Bone-0"), NodePath("Bone-1"), NodePath("Bone-3"), NodePath("Bone-2"), NodePath("Bone-5"), NodePath("Bone-6"), NodePath("Bone-7"), NodePath("Bone-8")]
+metadata/connected_nodes_idx = [0, 1, 3, 2, 5, 6, 7, 8]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-5" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(67.8854, 110.039)
+rotation = -1.48214
+rest = Transform2D(0.0885396, -0.996073, 0.996073, 0.0885396, 67.8854, 110.039)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96]
+metadata/idx = 5
+metadata/connected_nodes_paths = [NodePath("Bone-1"), NodePath("Bone-2"), NodePath("Bone-4"), NodePath("Bone-7"), NodePath("Bone-8")]
+metadata/connected_nodes_idx = [1, 2, 4, 7, 8]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-6" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(109.053, 35.5998)
+rotation = 2.3388
+rest = Transform2D(-0.694702, 0.719298, -0.719298, -0.694702, 109.053, 35.5998)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+metadata/idx = 6
+metadata/connected_nodes_paths = [NodePath("Bone-3"), NodePath("Bone-4"), NodePath("Bone-7")]
+metadata/connected_nodes_idx = [3, 4, 7]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-7" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(106.01, 73.444)
+rotation = -1.49056
+rest = Transform2D(0.0801529, -0.996783, 0.996783, 0.0801529, 106.01, 73.444)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126]
+metadata/idx = 7
+metadata/connected_nodes_paths = [NodePath("Bone-3"), NodePath("Bone-4"), NodePath("Bone-6"), NodePath("Bone-5"), NodePath("Bone-8")]
+metadata/connected_nodes_idx = [3, 4, 6, 5, 8]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
+position = Vector2(108.929, 112.929)
+rotation = -3.0713
+rest = Transform2D(-0.997531, -0.0702309, 0.0702309, -0.997531, 108.929, 112.929)
+auto_calculate_length_and_angle = false
+length = 60.0
+bone_angle = 0.0
+metadata/vert_owned = [127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148]
+metadata/idx = 8
+metadata/connected_nodes_paths = [NodePath("Bone-4"), NodePath("Bone-5"), NodePath("Bone-7")]
+metadata/connected_nodes_idx = [4, 5, 7]
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone-0" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(29.2537, 35.3836)
+mass = 0.2
+metadata/idx = 0
+metadata/bone_name = &"Bone-0"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-0"]
+shape = SubResource("RectangleShape2D_pjhpk")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-0"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-0")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-0-Bone-1" type="PinJoint2D" parent="SoftBody2D/Bone-0"]
+visible = false
+rotation = -0.0718824
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-1")
+softness = 20.0
+
+[node name="Joint2D-Bone-0-Bone-3" type="PinJoint2D" parent="SoftBody2D/Bone-0"]
+visible = false
+rotation = -1.50404
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-3")
+softness = 20.0
+
+[node name="Joint2D-Bone-0-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-0"]
+visible = false
+rotation = -0.81157
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Bone-1" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(31.9917, 73.4078)
+mass = 0.2
+metadata/idx = 1
+metadata/bone_name = &"Bone-1"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-1"]
+shape = SubResource("RectangleShape2D_k3bjh")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-1"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-1")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-1-Bone-0" type="PinJoint2D" parent="SoftBody2D/Bone-1"]
+visible = false
+rotation = -3.21347
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-0")
+softness = 20.0
+
+[node name="Joint2D-Bone-1-Bone-3" type="PinJoint2D" parent="SoftBody2D/Bone-1"]
+visible = false
+rotation = -2.35041
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-3")
+softness = 20.0
+
+[node name="Joint2D-Bone-1-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-1"]
+visible = false
+rotation = -1.53
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-1-Bone-2" type="PinJoint2D" parent="SoftBody2D/Bone-1"]
+visible = false
+rotation = 0.065622
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-2")
+softness = 20.0
+
+[node name="Joint2D-Bone-1-Bone-5" type="PinJoint2D" parent="SoftBody2D/Bone-1"]
+visible = false
+rotation = -0.775226
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-5")
+softness = 20.0
+
+[node name="Bone-2" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(29.4112, 112.675)
+mass = 0.2
+metadata/idx = 2
+metadata/bone_name = &"Bone-2"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-2"]
+shape = SubResource("RectangleShape2D_op03t")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-2"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-2")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-2-Bone-1" type="PinJoint2D" parent="SoftBody2D/Bone-2"]
+visible = false
+rotation = -3.07597
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-1")
+softness = 20.0
+
+[node name="Joint2D-Bone-2-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-2"]
+visible = false
+rotation = -2.30686
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-2-Bone-5" type="PinJoint2D" parent="SoftBody2D/Bone-2"]
+visible = false
+rotation = -1.6392
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-5")
+softness = 20.0
+
+[node name="Bone-3" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(67.848, 37.964)
+mass = 0.2
+metadata/idx = 3
+metadata/bone_name = &"Bone-3"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-3"]
+shape = SubResource("RectangleShape2D_u6p8p")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-3"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-3")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-3-Bone-0" type="PinJoint2D" parent="SoftBody2D/Bone-3"]
+visible = false
+rotation = -4.64563
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-0")
+softness = 20.0
+
+[node name="Joint2D-Bone-3-Bone-1" type="PinJoint2D" parent="SoftBody2D/Bone-3"]
+visible = false
+rotation = 0.791183
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-1")
+softness = 20.0
+
+[node name="Joint2D-Bone-3-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-3"]
+visible = false
+rotation = -0.0849018
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-3-Bone-6" type="PinJoint2D" parent="SoftBody2D/Bone-3"]
+visible = false
+rotation = -1.62811
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-6")
+softness = 20.0
+
+[node name="Joint2D-Bone-3-Bone-7" type="PinJoint2D" parent="SoftBody2D/Bone-3"]
+visible = false
+rotation = -0.821799
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-7")
+softness = 20.0
+
+[node name="Bone-4" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(71, 75)
+mass = 0.2
+metadata/idx = 4
+metadata/bone_name = &"Bone-4"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-4"]
+shape = SubResource("RectangleShape2D_xfum7")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-4"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-4")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-4-Bone-0" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = -3.95316
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-0")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-1" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = -4.6716
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-1")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-3" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = -3.22649
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-3")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-2" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = 0.834734
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-2")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-5" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = 0.0886559
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-5")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-6" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = -2.37359
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-6")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-7" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = -1.61521
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-7")
+softness = 20.0
+
+[node name="Joint2D-Bone-4-Bone-8" type="PinJoint2D" parent="SoftBody2D/Bone-4"]
+visible = false
+rotation = -0.785398
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-8")
+softness = 20.0
+
+[node name="Bone-5" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(67.8854, 110.039)
+mass = 0.2
+metadata/idx = 5
+metadata/bone_name = &"Bone-5"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-5"]
+shape = SubResource("RectangleShape2D_8v4b2")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-5"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-5")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-5-Bone-1" type="PinJoint2D" parent="SoftBody2D/Bone-5"]
+visible = false
+rotation = -3.91682
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-1")
+softness = 20.0
+
+[node name="Joint2D-Bone-5-Bone-2" type="PinJoint2D" parent="SoftBody2D/Bone-5"]
+visible = false
+rotation = 1.50239
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-2")
+softness = 20.0
+
+[node name="Joint2D-Bone-5-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-5"]
+visible = false
+rotation = -3.05294
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-5-Bone-7" type="PinJoint2D" parent="SoftBody2D/Bone-5"]
+visible = false
+rotation = -2.33573
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-7")
+softness = 20.0
+
+[node name="Joint2D-Bone-5-Bone-8" type="PinJoint2D" parent="SoftBody2D/Bone-5"]
+visible = false
+rotation = -1.50051
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-8")
+softness = 20.0
+
+[node name="Bone-6" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(109.053, 35.5998)
+mass = 0.2
+metadata/idx = 6
+metadata/bone_name = &"Bone-6"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-6"]
+shape = SubResource("RectangleShape2D_eyk48")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-6"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-6")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-6-Bone-3" type="PinJoint2D" parent="SoftBody2D/Bone-6"]
+visible = false
+rotation = 1.51348
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-3")
+softness = 20.0
+
+[node name="Joint2D-Bone-6-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-6"]
+visible = false
+rotation = 0.768005
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-6-Bone-7" type="PinJoint2D" parent="SoftBody2D/Bone-6"]
+visible = false
+rotation = 0.0802389
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-7")
+softness = 20.0
+
+[node name="Bone-7" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(106.01, 73.444)
+mass = 0.2
+metadata/idx = 7
+metadata/bone_name = &"Bone-7"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-7"]
+shape = SubResource("RectangleShape2D_gy18w")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-7"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-7")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-7-Bone-3" type="PinJoint2D" parent="SoftBody2D/Bone-7"]
+visible = false
+rotation = -3.96339
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-3")
+softness = 20.0
+
+[node name="Joint2D-Bone-7-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-7"]
+visible = false
+rotation = 1.52638
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-7-Bone-6" type="PinJoint2D" parent="SoftBody2D/Bone-7"]
+visible = false
+rotation = -3.06135
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-6")
+softness = 20.0
+
+[node name="Joint2D-Bone-7-Bone-5" type="PinJoint2D" parent="SoftBody2D/Bone-7"]
+visible = false
+rotation = 0.805861
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-5")
+softness = 20.0
+
+[node name="Joint2D-Bone-7-Bone-8" type="PinJoint2D" parent="SoftBody2D/Bone-7"]
+visible = false
+rotation = -0.0737944
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-8")
+softness = 20.0
+
+[node name="Bone-8" type="RigidBody2D" parent="SoftBody2D"]
+position = Vector2(108.929, 112.929)
+mass = 0.2
+metadata/idx = 8
+metadata/bone_name = &"Bone-8"
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-8"]
+shape = SubResource("RectangleShape2D_c5oqm")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-8"]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-8")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-8-Bone-4" type="PinJoint2D" parent="SoftBody2D/Bone-8"]
+visible = false
+rotation = -3.92699
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0
+
+[node name="Joint2D-Bone-8-Bone-5" type="PinJoint2D" parent="SoftBody2D/Bone-8"]
+visible = false
+rotation = -4.6421
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-5")
+softness = 20.0
+
+[node name="Joint2D-Bone-8-Bone-7" type="PinJoint2D" parent="SoftBody2D/Bone-8"]
+visible = false
+rotation = -3.21539
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-7")
+softness = 20.0
+
+[node name="Chair" type="RigidBody2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(138, 9.00002)
+
+[node name="RearWheel" type="RigidBody2D" parent="Chair"]
+z_index = 1
+position = Vector2(-21, 47)
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_f0gxk")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="Chair/RearWheel"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_fpt5r")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Chair/RearWheel"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_sx2er")
+
+[node name="RearJoint" type="PinJoint2D" parent="Chair/RearWheel"]
+position = Vector2(1, 3)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="FrontWheel" type="RigidBody2D" parent="Chair"]
+z_index = 1
+position = Vector2(77, 57)
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_bdbq2")
+metadata/_edit_group_ = true
+
+[node name="FrontJoint" type="PinJoint2D" parent="Chair/FrontWheel"]
+position = Vector2(1, 0)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="Sprite" type="Sprite2D" parent="Chair/FrontWheel"]
+texture_filter = 1
+position = Vector2(1, 1)
+texture = ExtResource("1_fpt5r")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Chair/FrontWheel"]
+visible = false
+position = Vector2(1, 0.999985)
+shape = SubResource("CircleShape2D_csxwr")
+
+[node name="Sprite" type="Sprite2D" parent="Chair"]
+position = Vector2(20.2501, 26)
+scale = Vector2(1.13672, 0.234375)
+texture = ExtResource("1_hi50l")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Chair"]
+position = Vector2(21.1076, 26.974)
+shape = SubResource("RectangleShape2D_ale3x")
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
+unique_name_in_owner = true
+script = ExtResource("4_o1fsy")
+current_state = NodePath("Inactive")
+
+[node name="Inactive" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("5_2eqww")
+
+[node name="Idle" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("6_wpwpu")
+
+[node name="Hack" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("5_2ojq6")
+
+[connection signal="state_changed" from="FiniteStateMachine" to="." method="_on_finite_state_machine_state_changed"]

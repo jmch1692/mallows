@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://6m3v5w1qrfmq"]
+
+[ext_resource type="PackedScene" uid="uid://f36ta0hi3jrw" path="res://scenes/characters/bouncy/bouncy.tscn" id="1_cpiyb"]
+[ext_resource type="PackedScene" uid="uid://bkjahrg0370i0" path="res://scenes/characters/luffy/luffy.tscn" id="2_58a0r"]
+[ext_resource type="PackedScene" uid="uid://defres0pmeq64" path="res://scenes/system/selector/selector.tscn" id="3_br5t7"]
+[ext_resource type="PackedScene" uid="uid://b6x3xmqem5j8n" path="res://scenes/system/selector/pointer.tscn" id="4_1r3yl"]
+[ext_resource type="PackedScene" uid="uid://dclcclfnjiua8" path="res://scenes/characters/haki/Haki.tscn" id="5_v68wb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_do6ag"]
+
+[node name="Playground" type="Node2D"]
+
+[node name="Bouncy" parent="." instance=ExtResource("1_cpiyb")]
+
+[node name="Luffy" parent="." instance=ExtResource("2_58a0r")]
+
+[node name="Haki" parent="." instance=ExtResource("5_v68wb")]
+position = Vector2(198, 405)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(394, 210)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 430)
+shape = SubResource("WorldBoundaryShape2D_do6ag")
+
+[node name="Selector" parent="." node_paths=PackedStringArray("characters") instance=ExtResource("3_br5t7")]
+characters = [NodePath("../Bouncy"), NodePath("../Luffy"), NodePath("../Haki")]
+
+[node name="Pointer" parent="." node_paths=PackedStringArray("character") instance=ExtResource("4_1r3yl")]
+character = NodePath("../Bouncy")

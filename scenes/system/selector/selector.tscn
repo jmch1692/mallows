@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://defres0pmeq64"]
+
+[ext_resource type="Script" path="res://scenes/system/selector/selector.gd" id="1_4mxo1"]
+
+[node name="Selector" type="Node2D"]
+script = ExtResource("1_4mxo1")

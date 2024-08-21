@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6x3xmqem5j8n"]
+
+[ext_resource type="Script" path="res://scenes/system/selector/pointer.gd" id="1_7pio4"]
+[ext_resource type="Texture2D" uid="uid://mbwi7vj55su5" path="res://art/HUD/arrowDown.png" id="1_kamjj"]
+
+[node name="Pointer" type="Marker2D"]
+script = ExtResource("1_7pio4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kamjj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(569, 307)
+zoom = Vector2(0.75, 0.75)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
