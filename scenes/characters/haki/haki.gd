@@ -12,6 +12,7 @@ var _state : String
 func _ready() -> void:
 	SignalBus.hacking_started.connect(_on_hacking_started)
 	SignalBus.hacking_ended.connect(_on_hacking_ended)
+	SignalBus.haki_break.connect(_on_break.bind())
 	_state = state_machine.current_state.get_node(state_machine.current_state.get_path()).name
 
 func _on_hacking_started():
@@ -32,3 +33,9 @@ func activate() -> void:
 func deactivate() -> void:
 	if _state && _state != "Inactive":
 		state_machine.change_state("Inactive")
+		
+func _on_break(hold: bool) -> void:
+	if hold:
+		var center_body : RigidBody2D = softbody.get_center_body().rigidbody
+		if !center_body.linear_velocity.is_equal_approx(Vector2.ZERO):
+			center_body.apply_central_force(-center_body.linear_velocity * 100.0)

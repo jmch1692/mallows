@@ -2,8 +2,8 @@ extends StateMachineState
 
 var jump_force : float = 0.0
 
-const JUMP_INCREASE_FORCE : float = 1.0
-const MAX_JUMP_FORCE : float = 80.0
+const JUMP_INCREASE_FORCE : float = 2.0
+const MAX_JUMP_FORCE : float = 120.0
 
 # Called when the state machine enters this state.
 func on_enter():

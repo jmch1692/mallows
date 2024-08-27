@@ -9,3 +9,4 @@ signal follow_player(character: Node2D)
 # Haki signals
 signal hacking_started()
 signal hacking_ended()
+signal haki_break(hold: bool)

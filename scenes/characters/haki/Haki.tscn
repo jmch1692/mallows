@@ -141,7 +141,6 @@ radius = 18.0278
 size = Vector2(141.785, 25.948)
 
 [node name="Haki" type="Node2D" node_paths=PackedStringArray("front_wheel", "rear_wheel")]
-position = Vector2(1, 1)
 script = ExtResource("1_mbgbr")
 front_wheel = NodePath("Chair/FrontWheel")
 rear_wheel = NodePath("Chair/RearWheel")
@@ -162,6 +161,7 @@ softness = 20.0
 radius = 50
 margin_offset_edge = 10.0
 mass = 0.2
+collision_mask = 3
 
 [node name="Skeleton2D" type="Skeleton2D" parent="SoftBody2D"]
 visible = false
@@ -169,8 +169,8 @@ modification_stack = SubResource("SkeletonModificationStack2D_te1bo")
 
 [node name="Bone-0" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(29.2537, 35.3836)
-rotation = 0.0667596
-scale = Vector2(1, 1)
+rotation = 0.0667603
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.997772, 0.0667101, -0.0667101, 0.997772, 29.2537, 35.3836)
 auto_calculate_length_and_angle = false
 length = 60.0
@@ -183,7 +183,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-1" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(31.9917, 73.4078)
-rotation = 0.0407937
+rotation = 0.0407944
 rest = Transform2D(0.999168, 0.0407824, -0.0407824, 0.999168, 31.9917, 73.4078)
 auto_calculate_length_and_angle = false
 length = 60.0
@@ -196,7 +196,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-2" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(29.4112, 112.675)
-rotation = -0.736063
+rotation = -0.736061
 rest = Transform2D(0.741118, -0.671375, 0.671375, 0.741118, 29.4112, 112.675)
 auto_calculate_length_and_angle = false
 length = 60.0
@@ -210,6 +210,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-3" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(67.848, 37.964)
 rotation = 1.48589
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(0.0848, 0.996398, -0.996398, 0.0848, 67.848, 37.964)
 auto_calculate_length_and_angle = false
 length = 60.0
@@ -275,6 +276,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(108.929, 112.929)
 rotation = -3.0713
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(-0.997531, -0.0702309, 0.0702309, -0.997531, 108.929, 112.929)
 auto_calculate_length_and_angle = false
 length = 60.0
@@ -287,6 +289,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-0" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(29.2537, 35.3836)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
@@ -323,6 +326,7 @@ softness = 20.0
 
 [node name="Bone-1" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(31.9917, 73.4078)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
@@ -373,6 +377,7 @@ softness = 20.0
 
 [node name="Bone-2" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(29.4112, 112.675)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
@@ -409,6 +414,7 @@ softness = 20.0
 
 [node name="Bone-3" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(67.848, 37.964)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
@@ -459,6 +465,7 @@ softness = 20.0
 
 [node name="Bone-4" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(71, 75)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
@@ -530,6 +537,7 @@ softness = 20.0
 
 [node name="Bone-5" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(67.8854, 110.039)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
@@ -580,6 +588,7 @@ softness = 20.0
 
 [node name="Bone-6" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(109.053, 35.5998)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
@@ -616,6 +625,7 @@ softness = 20.0
 
 [node name="Bone-7" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(106.01, 73.444)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
@@ -666,6 +676,7 @@ softness = 20.0
 
 [node name="Bone-8" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(108.929, 112.929)
+collision_mask = 3
 mass = 0.2
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
@@ -700,13 +711,20 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
 softness = 20.0
 
+[node name="MallowChairJoint" type="PinJoint2D" parent="."]
+position = Vector2(163, 3)
+node_a = NodePath("../SoftBody2D/Bone-4")
+node_b = NodePath("../Chair")
+
 [node name="Chair" type="RigidBody2D" parent="."]
 physics_interpolation_mode = 1
 position = Vector2(138, 9.00002)
+collision_mask = 3
 
 [node name="RearWheel" type="RigidBody2D" parent="Chair"]
 z_index = 1
 position = Vector2(-21, 47)
+collision_mask = 3
 mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_f0gxk")
 metadata/_edit_group_ = true
@@ -728,6 +746,7 @@ node_b = NodePath("..")
 [node name="FrontWheel" type="RigidBody2D" parent="Chair"]
 z_index = 1
 position = Vector2(77, 57)
+collision_mask = 3
 mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_bdbq2")
 metadata/_edit_group_ = true
@@ -743,7 +762,6 @@ position = Vector2(1, 1)
 texture = ExtResource("1_fpt5r")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Chair/FrontWheel"]
-visible = false
 position = Vector2(1, 0.999985)
 shape = SubResource("CircleShape2D_csxwr")
 

@@ -8,11 +8,3 @@ script = ExtResource("1_7pio4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kamjj")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(569, 307)
-zoom = Vector2(0.75, 0.75)
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
