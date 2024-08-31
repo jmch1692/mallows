@@ -1,18 +1,16 @@
-extends Node2D
+extends Mallow
 
 @export var front_wheel : RigidBody2D
 @export var rear_wheel : RigidBody2D
 
-@onready var state_machine : FiniteStateMachine = %FiniteStateMachine
 @onready var softbody : SoftBody2D = %SoftBody2D
-
-var _state : String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.hacking_started.connect(_on_hacking_started)
 	SignalBus.hacking_ended.connect(_on_hacking_ended)
 	SignalBus.haki_break.connect(_on_break.bind())
+	state_machine = %FiniteStateMachine
 	_state = state_machine.current_state.get_node(state_machine.current_state.get_path()).name
 
 func _on_hacking_started():
@@ -25,14 +23,6 @@ func _on_hacking_ended():
 	
 func _on_finite_state_machine_state_changed(new_state : StateMachineState):
 	_state = new_state.get_node(new_state.get_path()).name
-	
-func activate() -> void:
-	if _state && _state == "Inactive":
-		state_machine.change_state("Idle")
-		
-func deactivate() -> void:
-	if _state && _state != "Inactive":
-		state_machine.change_state("Inactive")
 		
 func _on_break(hold: bool) -> void:
 	if hold:

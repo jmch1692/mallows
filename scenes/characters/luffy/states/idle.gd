@@ -2,6 +2,8 @@ extends StateMachineState
 
 @onready var player : Node2D = owner
 
+var bumped : bool = false
+
 # Called when the state machine enters this state.
 func on_enter():
 	player.movement_direction = Vector2.ZERO
@@ -20,10 +22,13 @@ func on_input(event: InputEvent):
 	if movement != 0:
 		state_machine.change_state("Luff")
 	
-	#TODO: Only if laying down. Maybe use a raycast to know whether the mallow is down
 	if event.is_action_pressed("enter"):
-		SignalBus.wake_up.emit()
-		await get_tree().create_timer(2).timeout
+		if bumped == false && player.need_help:
+			bumped = true
+			SignalBus.wake_up.emit()
+			await get_tree().create_timer(1.5).timeout
+			bumped = false
+			player.need_help = false
 
 # Called when the state machine exits this state.
 func on_exit():

@@ -1,8 +1,10 @@
 extends StateMachineState
 
+@onready var player : Node2D = owner
+
 # Called when the state machine enters this state.
 func on_enter():
-	pass
+	player.movement_direction = Vector2.ZERO
 
 # Called every frame when this state is active.
 func on_process(delta):

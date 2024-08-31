@@ -1,9 +1,10 @@
 extends StateMachineState
 
+@export var max_jump_force : float = 120.0
+
 var jump_force : float = 0.0
 
 const JUMP_INCREASE_FORCE : float = 2.0
-const MAX_JUMP_FORCE : float = 120.0
 
 # Called when the state machine enters this state.
 func on_enter():
@@ -12,10 +13,10 @@ func on_enter():
 # Called every frame when this state is active.
 func on_process(delta):
 	if Input.is_action_pressed("enter"):
-		if jump_force <= MAX_JUMP_FORCE:
+		if jump_force <= max_jump_force:
 			jump_force += JUMP_INCREASE_FORCE
 	if Input.is_action_just_released("enter"):
-		SignalBus.fly.emit(min(MAX_JUMP_FORCE, jump_force))
+		SignalBus.fly.emit(min(max_jump_force, jump_force))
 		jump_force = 0.0
 		state_machine.change_state("Fly")
 		

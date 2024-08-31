@@ -1098,6 +1098,7 @@ script = ExtResource("4_cto0p")
 
 [node name="Compress" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("5_63s0v")
+max_jump_force = 100.0
 
 [node name="Fly" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("6_6x6op")
