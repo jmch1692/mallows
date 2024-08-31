@@ -19,6 +19,11 @@ func on_input(event: InputEvent):
 	var movement = Input.get_axis("left", "right")
 	if movement != 0:
 		state_machine.change_state("Luff")
+	
+	#TODO: Only if laying down. Maybe use a raycast to know whether the mallow is down
+	if event.is_action_pressed("enter"):
+		SignalBus.wake_up.emit()
+		await get_tree().create_timer(2).timeout
 
 # Called when the state machine exits this state.
 func on_exit():

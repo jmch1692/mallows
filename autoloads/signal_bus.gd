@@ -1,12 +1,19 @@
 extends Node
 
-#Bouncy signals
+#region Luffy signals
+signal wake_up()
+#endregion
+
+#region Bouncy signals
 signal fly(force: float)
+#endregion
 
-# Pointer and selector signals
+#region Pointer and selector signals
 signal follow_player(character: Node2D)
+#endregion
 
-# Haki signals
+#region Haki signals
 signal hacking_started()
 signal hacking_ended()
 signal haki_break(hold: bool)
+#endregion

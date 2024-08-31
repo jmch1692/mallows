@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://6m3v5w1qrfmq"]
+[gd_scene load_steps=10 format=4 uid="uid://6m3v5w1qrfmq"]
 
 [ext_resource type="PackedScene" uid="uid://f36ta0hi3jrw" path="res://scenes/characters/bouncy/bouncy.tscn" id="1_cpiyb"]
+[ext_resource type="Script" path="res://scenes/levels/playground.gd" id="1_oa41g"]
 [ext_resource type="PackedScene" uid="uid://bkjahrg0370i0" path="res://scenes/characters/luffy/luffy.tscn" id="2_58a0r"]
 [ext_resource type="PackedScene" uid="uid://defres0pmeq64" path="res://scenes/system/selector/selector.tscn" id="3_br5t7"]
 [ext_resource type="PackedScene" uid="uid://b6x3xmqem5j8n" path="res://scenes/system/selector/pointer.tscn" id="4_1r3yl"]
@@ -10,13 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://dvlns1ouoopa" path="res://scenes/system/camera/camera.tscn" id="8_t6xtf"]
 
 [node name="Playground" type="Node2D"]
+script = ExtResource("1_oa41g")
 
 [node name="Bouncy" parent="." instance=ExtResource("1_cpiyb")]
 position = Vector2(6846, 3457)
 
 [node name="Luffy" parent="." instance=ExtResource("2_58a0r")]
 position = Vector2(7137, 3480)
-movement_speed = 2.0
 
 [node name="Haki" parent="." instance=ExtResource("5_v68wb")]
 position = Vector2(7297, 3631)

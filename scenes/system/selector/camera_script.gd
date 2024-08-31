@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 	else:
 		position = get_global_mouse_position() # Already lerped by camera settings (Position smoothing)
 	
-	print(zoom)
 	zoom = lerp(zoom, zoom_level, ZOOM_SPEED)
 	
 func _input(event: InputEvent) -> void:

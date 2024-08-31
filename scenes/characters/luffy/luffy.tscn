@@ -110,7 +110,7 @@ size = Vector2(47, 47)
 
 [node name="Luffy" type="Node2D"]
 script = ExtResource("1_nxl3u")
-movement_speed = 5.0
+movement_speed = 6.0
 
 [node name="SoftBody2D" type="Polygon2D" parent="."]
 unique_name_in_owner = true
@@ -126,6 +126,7 @@ vertex_interval = 50
 softness = 5.0
 radius = 47
 margin_offset_edge = 10.0
+mass = 0.4
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 
@@ -281,7 +282,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-0" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(22.6076, 49.0343)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
@@ -326,7 +327,7 @@ softness = 5.0
 [node name="Bone-1" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(25.2073, 99.5982)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
@@ -378,7 +379,7 @@ softness = 5.0
 [node name="Bone-2" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(21.6307, 144.6)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
@@ -416,7 +417,7 @@ softness = 5.0
 [node name="Bone-3" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(54.4417, 24.3955)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
@@ -461,7 +462,7 @@ softness = 5.0
 [node name="Bone-4" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(55.7806, 61.6056)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
@@ -527,7 +528,7 @@ softness = 5.0
 [node name="Bone-5" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(59.7572, 94.6285)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
@@ -600,7 +601,7 @@ softness = 5.0
 [node name="Bone-6" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(54.7334, 142.651)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
@@ -652,7 +653,7 @@ softness = 5.0
 [node name="Bone-7" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(97.0516, 23.4561)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
@@ -690,7 +691,7 @@ softness = 5.0
 [node name="Bone-8" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(94.4759, 59.1177)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
@@ -742,7 +743,7 @@ softness = 5.0
 [node name="Bone-9" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(91.9758, 98.9522)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 9
 metadata/bone_name = &"Bone-9"
@@ -794,7 +795,7 @@ softness = 5.0
 [node name="Bone-10" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(96.355, 143.925)
 collision_mask = 3
-mass = 0.1
+mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
