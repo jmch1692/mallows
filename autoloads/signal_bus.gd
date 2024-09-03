@@ -6,6 +6,7 @@ signal wake_up()
 
 #region Bouncy signals
 signal fly(force: float)
+signal set_aim_visibility(show: bool)
 #endregion
 
 #region Pointer and selector signals

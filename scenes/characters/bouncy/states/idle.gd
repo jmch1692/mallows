@@ -6,7 +6,8 @@ var direction_vector : Vector2 = Vector2.UP
 
 # Called when the state machine enters this state.
 func on_enter():
-	pass
+	SignalBus.set_aim_visibility.emit(true)
+	player.jump_direction_vector = Vector2.UP
 
 # Called every frame when this state is active.
 func on_process(delta):
@@ -14,12 +15,11 @@ func on_process(delta):
 
 # Called every physics frame when this state is active.
 func on_physics_process(delta):
-	pass
+	player.jump_direction_vector = direction_vector.normalized()	
 
 # Called when there is an input event while this state is active.
 func on_input(event: InputEvent):
 	if event.is_action_pressed("enter"):
-		player.jump_direction_vector = direction_vector.normalized()
 		direction_vector = Vector2.UP
 		state_machine.change_state("Compress")
 	
@@ -33,4 +33,4 @@ func on_input(event: InputEvent):
 
 # Called when the state machine exits this state.
 func on_exit():
-	pass
+	SignalBus.set_aim_visibility.emit(false)
