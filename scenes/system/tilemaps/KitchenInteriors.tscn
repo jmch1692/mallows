@@ -1,0 +1,4 @@
+[gd_scene format=4 uid="uid://dvg4qd6nyfr11"]
+
+[node name="KitchenInteriors" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAAAAAEAAAADAAIAAAAAAAIAAAADAAMAAAABAAEAAAABAAAAAAABAAIAAAACAAMAAAACAAEAAAACAAIAAAACAAIAAAACAAMAAAA=")

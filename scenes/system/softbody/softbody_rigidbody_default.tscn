@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1x5tvphlnvsm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fyu7t"]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewywq"]
+resource_local_to_scene = true
+size = Vector2(47, 47)
+
+[node name="DefaultRigidBody" type="RigidBody2D"]
+collision_mask = 11
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_fyu7t")
+metadata/idx = 0
+metadata/bone_name = &"Bone-0"
+
+[node name="RectangleShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_ewywq")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+visible = false
+remote_path = NodePath("../../Skeleton2D/Bone-0")
+update_rotation = false
+update_scale = false
+
+[node name="Joint2D-Bone-0-Bone-2" type="PinJoint2D" parent="."]
+visible = false
+rotation = -2.19189
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-2")
+softness = 20.0
+
+[node name="Joint2D-Bone-0-Bone-1" type="PinJoint2D" parent="."]
+visible = false
+rotation = 0.0242747
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-1")
+softness = 20.0
+
+[node name="Joint2D-Bone-0-Bone-3" type="PinJoint2D" parent="."]
+visible = false
+rotation = -1.21055
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-3")
+softness = 20.0
+
+[node name="Joint2D-Bone-0-Bone-4" type="PinJoint2D" parent="."]
+visible = false
+rotation = -0.5984
+node_a = NodePath("..")
+node_b = NodePath("../../Bone-4")
+softness = 20.0

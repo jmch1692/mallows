@@ -11,106 +11,106 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bnwc0"]
 rough = true
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_0fsvn"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_spqeh"]
 resource_local_to_scene = true
 bone_index = 0
 bone2d_node = NodePath("Bone-0")
 target_nodepath = NodePath("Bone-4")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_glh13"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_7pd7f"]
 resource_local_to_scene = true
 bone_index = 1
 bone2d_node = NodePath("Bone-1")
 target_nodepath = NodePath("Bone-5")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_1u1pk"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_prw6n"]
 resource_local_to_scene = true
 bone_index = 10
 bone2d_node = NodePath("Bone-10")
 target_nodepath = NodePath("Bone-6")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_8rvc3"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_n325j"]
 resource_local_to_scene = true
 bone_index = 2
 bone2d_node = NodePath("Bone-2")
 target_nodepath = NodePath("Bone-5")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_12orb"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_gwjx3"]
 resource_local_to_scene = true
 bone_index = 3
 bone2d_node = NodePath("Bone-3")
 target_nodepath = NodePath("Bone-7")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_pflhp"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_p6beu"]
 resource_local_to_scene = true
 bone_index = 4
 bone2d_node = NodePath("Bone-4")
 target_nodepath = NodePath("Bone-3")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_ath1e"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_y1rlt"]
 resource_local_to_scene = true
 bone_index = 5
 bone2d_node = NodePath("Bone-5")
 target_nodepath = NodePath("Bone-6")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_x1wli"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fe0ny"]
 resource_local_to_scene = true
 bone_index = 6
 bone2d_node = NodePath("Bone-6")
 target_nodepath = NodePath("Bone-5")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_nr3wc"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_5lju2"]
 resource_local_to_scene = true
 bone_index = 7
 bone2d_node = NodePath("Bone-7")
 target_nodepath = NodePath("Bone-4")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_8lenv"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_wq5so"]
 resource_local_to_scene = true
 bone_index = 8
 bone2d_node = NodePath("Bone-8")
 target_nodepath = NodePath("Bone-7")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_4gkuj"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_bs416"]
 resource_local_to_scene = true
 bone_index = 9
 bone2d_node = NodePath("Bone-9")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_cpbxb"]
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_e745j"]
 resource_local_to_scene = true
 enabled = true
 modification_count = 11
-modifications/0 = SubResource("SkeletonModification2DLookAt_0fsvn")
-modifications/1 = SubResource("SkeletonModification2DLookAt_glh13")
-modifications/2 = SubResource("SkeletonModification2DLookAt_8rvc3")
-modifications/3 = SubResource("SkeletonModification2DLookAt_12orb")
-modifications/4 = SubResource("SkeletonModification2DLookAt_pflhp")
-modifications/5 = SubResource("SkeletonModification2DLookAt_ath1e")
-modifications/6 = SubResource("SkeletonModification2DLookAt_x1wli")
-modifications/7 = SubResource("SkeletonModification2DLookAt_nr3wc")
-modifications/8 = SubResource("SkeletonModification2DLookAt_8lenv")
-modifications/9 = SubResource("SkeletonModification2DLookAt_4gkuj")
-modifications/10 = SubResource("SkeletonModification2DLookAt_1u1pk")
+modifications/0 = SubResource("SkeletonModification2DLookAt_spqeh")
+modifications/1 = SubResource("SkeletonModification2DLookAt_7pd7f")
+modifications/2 = SubResource("SkeletonModification2DLookAt_n325j")
+modifications/3 = SubResource("SkeletonModification2DLookAt_gwjx3")
+modifications/4 = SubResource("SkeletonModification2DLookAt_p6beu")
+modifications/5 = SubResource("SkeletonModification2DLookAt_y1rlt")
+modifications/6 = SubResource("SkeletonModification2DLookAt_fe0ny")
+modifications/7 = SubResource("SkeletonModification2DLookAt_5lju2")
+modifications/8 = SubResource("SkeletonModification2DLookAt_wq5so")
+modifications/9 = SubResource("SkeletonModification2DLookAt_bs416")
+modifications/10 = SubResource("SkeletonModification2DLookAt_prw6n")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gupn7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apygb"]
 resource_local_to_scene = true
 size = Vector2(47, 47)
 
 [node name="Luffy" type="Node2D"]
 script = ExtResource("1_nxl3u")
-movement_speed = 4.5
+movement_speed = 0.6
 
 [node name="SoftBody2D" type="Polygon2D" parent="."]
 unique_name_in_owner = true
@@ -127,16 +127,16 @@ softness = 5.0
 radius = 47
 margin_offset_edge = 10.0
 mass = 0.4
-collision_mask = 3
+collision_mask = 11
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 
 [node name="Skeleton2D" type="Skeleton2D" parent="SoftBody2D"]
 visible = false
-modification_stack = SubResource("SkeletonModificationStack2D_cpbxb")
+modification_stack = SubResource("SkeletonModificationStack2D_e745j")
 
 [node name="Bone-0" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(22.6076, 49.0343)
-rotation = 0.362239
+rotation = 0.36224
 rest = Transform2D(0.935105, 0.35437, -0.35437, 0.935105, 22.6076, 49.0343)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -149,8 +149,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-1" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(25.2073, 99.5982)
-rotation = -0.142861
-scale = Vector2(0.999999, 0.999999)
+rotation = -0.142862
+scale = Vector2(1, 1)
 rest = Transform2D(0.989813, -0.142377, 0.142377, 0.989813, 25.2073, 99.5982)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -163,7 +163,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-2" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(21.6307, 144.6)
-rotation = -0.919049
+rotation = -0.919045
 rest = Transform2D(0.606579, -0.795023, 0.795023, 0.606579, 21.6307, 144.6)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -176,7 +176,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-3" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(54.4417, 24.3955)
-rotation = -0.022043
+rotation = -0.0220434
 rest = Transform2D(0.999757, -0.0220416, 0.0220416, 0.999757, 54.4417, 24.3955)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -243,7 +243,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(94.4759, 59.1177)
 rotation = -1.4987
-scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.0720381, -0.997402, 0.997402, 0.0720381, 94.4759, 59.1177)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -269,7 +268,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-10" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(96.355, 143.925)
-rotation = -3.11099
+rotation = -3.111
 rest = Transform2D(-0.999532, -0.0305878, 0.0305878, -0.999532, 96.355, 143.925)
 auto_calculate_length_and_angle = false
 length = 50.0
@@ -282,14 +281,14 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-0" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(22.6076, 49.0343)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-0"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-0"]
 visible = false
@@ -327,14 +326,14 @@ softness = 5.0
 
 [node name="Bone-1" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(25.2073, 99.5982)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-1"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-1"]
 visible = false
@@ -379,14 +378,14 @@ softness = 5.0
 
 [node name="Bone-2" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(21.6307, 144.6)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-2"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-2"]
 visible = false
@@ -417,14 +416,14 @@ softness = 5.0
 
 [node name="Bone-3" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(54.4417, 24.3955)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-3"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-3"]
 visible = false
@@ -462,14 +461,14 @@ softness = 5.0
 
 [node name="Bone-4" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(55.7806, 61.6056)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-4"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-4"]
 visible = false
@@ -528,14 +527,14 @@ softness = 5.0
 
 [node name="Bone-5" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(59.7572, 94.6285)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-5"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-5"]
 visible = false
@@ -601,14 +600,14 @@ softness = 5.0
 
 [node name="Bone-6" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(54.7334, 142.651)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-6"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-6"]
 visible = false
@@ -653,14 +652,14 @@ softness = 5.0
 
 [node name="Bone-7" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(97.0516, 23.4561)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-7"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-7"]
 visible = false
@@ -691,14 +690,14 @@ softness = 5.0
 
 [node name="Bone-8" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(94.4759, 59.1177)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-8"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-8"]
 visible = false
@@ -743,14 +742,14 @@ softness = 5.0
 
 [node name="Bone-9" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(91.9758, 98.9522)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 9
 metadata/bone_name = &"Bone-9"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-9"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-9"]
 visible = false
@@ -795,14 +794,14 @@ softness = 5.0
 
 [node name="Bone-10" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(96.355, 143.925)
-collision_mask = 3
+collision_mask = 11
 mass = 0.4
 physics_material_override = SubResource("PhysicsMaterial_bnwc0")
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="SoftBody2D/Bone-10"]
-shape = SubResource("RectangleShape2D_gupn7")
+shape = SubResource("RectangleShape2D_apygb")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="SoftBody2D/Bone-10"]
 visible = false

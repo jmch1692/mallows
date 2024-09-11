@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="mallows"
-run/main_scene="res://scenes/levels/playground.tscn"
+run/main_scene="res://scenes/levels/level1/first_level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SignalBus="*res://autoloads/signal_bus.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=980
 
 [editor_plugins]
 
@@ -71,6 +76,7 @@ restart={
 2d_physics/layer_1="mallows"
 2d_physics/layer_2="terrain"
 2d_physics/layer_3="interactive"
+2d_physics/layer_4="hazardous_terrain"
 
 [physics]
 

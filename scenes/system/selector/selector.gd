@@ -8,8 +8,9 @@ var pointer : int
 
 func _ready():
 	pointer = 0
-	character = characters[pointer]
-	softbody = character.get_node("SoftBody2D")
+	if characters.size() > 0:
+		character = characters[pointer]
+		softbody = character.get_node("SoftBody2D")
 		
 func _input(event):
 	if Input.is_action_just_pressed("select"):

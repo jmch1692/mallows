@@ -21,7 +21,7 @@ func _on_set_aim_visibility(to: bool) -> void:
 	rotation = 0.0
 	
 func _process(delta: float) -> void:
-	position = center_body.position
+	position = center_body.position	
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("left"):

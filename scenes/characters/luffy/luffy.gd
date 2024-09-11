@@ -19,11 +19,16 @@ func _ready():
 	SignalBus.wake_up.connect(_on_wake_up)
 	_state = state_machine.current_state.get_node(state_machine.current_state.get_path()).name
 	center_body = softbody.get_center_body().rigidbody
+	var bodies = softbody.get_rigid_bodies()
+	for body in bodies:
+		if body.rigidbody:
+			body.rigidbody.lock_rotation = true
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if(abs(center_body.linear_velocity.x)) <= 250:
-		softbody.apply_force((movement_direction * movement_speed) / delta)
+		softbody.apply_impulse((movement_direction * movement_speed) / delta)
 	
 	# Means it's laying on the floor, without any linear velocity left
 	if abs(center_body.rotation) >= 1.5 && abs(center_body.linear_velocity.x) <= 0.1:

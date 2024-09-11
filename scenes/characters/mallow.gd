@@ -11,3 +11,7 @@ func activate() -> void:
 func deactivate() -> void:
 	if _state && _state != "Inactive":
 		state_machine.change_state("Inactive")
+		
+func kill() -> void:
+	#TODO: Find the closest and active spawn point, and respawn there
+	print("I'm dead")

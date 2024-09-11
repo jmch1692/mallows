@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://5xmm2p7vev3g"]
+
+[ext_resource type="Script" path="res://scenes/system/tilemaps/tile_collision_baker.gd" id="1_0838e"]
+
+[node name="TileCollisionBaker" type="StaticBody2D"]
+script = ExtResource("1_0838e")
